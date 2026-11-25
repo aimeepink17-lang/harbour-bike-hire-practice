@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Harbour Bike Hire</title>
+<style>
+body{font:16px/1.55 system-ui,sans-serif;color:#152638;background:#eff5f7;margin:0}
+main{max-width:720px;margin:auto;padding:40px 20px}h1{margin:0;color:#17374d;font-size:2.5rem}
+section{margin:24px 0;padding:22px;background:white;border:1px solid #cbdde5;border-radius:12px}
+label{display:block;margin-top:12px}input,button{font:inherit;padding:8px 12px}input{box-sizing:border-box;width:100%}
+button{margin-top:12px;background:#184960;color:white;border:0;border-radius:5px;cursor:pointer}button:disabled{opacity:.6}
+#answer{font-size:1.13rem;margin-bottom:4px}small{color:#415866}a{color:#14567a}
+</style>
+<main>
+<h1>Harbour Bike Hire</h1>
+<p>Check current bike availability and total hire cost.</p>
+<section>
+<form id="ask">
+<label for="question">Customer question</label>
+<input id="question" required value="Can I hire four electric bikes for one day with a budget of €140?">
+<button id="submit">Check booking</button>
+</form>
+<p id="answer" role="status"></p><small id="source"></small>
+<p id="explanation"></p>
+</section>
+<details><summary>Gemini settings</summary>
+<label for="model">Model</label><input id="model" value="gemini-3.5-flash-lite">
+<label for="key">API key for this tab</label><input id="key" type="password" autocomplete="off">
+<button id="save">Save for this tab</button> <button id="forget">Forget key</button>
+<p id="settings" role="status"></p>
+</details>
+<p><a href="https://docs.google.com/spreadsheets/d/16Amjwzxri7gNbAzh5qt6wsvZdQs4nLk5fuEChtihoHI/edit#gid=0">Live inventory Sheet</a> · Read-only booking advice</p>
+</main>
+<script src="app.js" defer></script>
+</html>
